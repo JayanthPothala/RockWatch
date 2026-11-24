@@ -1,0 +1,97 @@
+================================================================================
+ROCKWATCH - PHASE 1: DATA CLEANING & PREPROCESSING EXECUTION
+Execution timestamp: 2026-11-16 18:28:04
+Approved plan: Preprocessing Plan Revision 3
+================================================================================
+
+[Step 1] Loading original modelling dataset (read-only)...
+  Loaded raw dataset: 12,409 rows, 30 columns
+
+[Step 2] Adding diagnostic flag_water_lulc...
+  Diagnostic flag added. Rows with flag_water_lulc == 1: 28
+
+[Step 3] Performing coordinate deduplication (min sample_id per unique coordinate)...
+  Rows before deduplication: 12,409
+  Duplicate pixel exports removed: 672
+  Rows after deduplication: 11,737
+  Class distribution after dedup: class=1: 5,859 (49.92%), class=0: 5,878 (50.08%)
+
+[Step 4] Engineering circular aspect features (sin_aspect, cos_aspect)...
+  Flat terrain locations (slope_deg == 0): 73 rows
+  sin_aspect range: [-1.0000, 1.0000]
+  cos_aspect range: [-1.0000, 1.0000]
+
+[Step 5] Dropping quasi-constant LULC_90 column...
+  LULC_90 positive count before dropping: 1 / 11737
+  Shape of deduplicated working dataframe: (11737, 32)
+
+[Step 6] Computing deterministic latitude cut points from deduplicated data...
+  CUT1 (70th percentile): 31.713044°N
+  CUT2 (85th percentile): 32.144235°N
+
+[Step 7] Applying spatial split with 500m (~0.004505°) exclusion buffer...
+  Buffer size: 500.0 m (0.004505°)
+  Rows excluded around CUT1: 46
+  Rows excluded around CUT2: 22
+  Total rows excluded: 68
+  TRAIN rows: 8,188 | class1: 4,024 (49.15%), class0: 4,164 (50.85%)
+  VAL   rows: 1,731 | class1: 896 (51.76%), class0: 835 (48.24%)
+  TEST  rows: 1,750 | class1: 914 (52.23%), class0: 836 (47.77%)
+
+[Step 8] Fitting StandardScaler on TRAIN data only (6 z-score predictors)...
+  Features scaled: ['Dist_River_z', 'Elevation_z', 'FlowAccumulation_z', 'NDVI_z', 'Rainfall_z', 'Slope_z']
+  Aspect_z is replaced by sin_aspect and cos_aspect; not scaled.
+    Dist_River_z        : train_mean = +0.017090, train_std = 1.062119
+    Elevation_z         : train_mean = -0.077597, train_std = 0.960752
+    FlowAccumulation_z  : train_mean = -0.055684, train_std = 0.943775
+    NDVI_z              : train_mean = +0.090728, train_std = 0.958193
+    Rainfall_z          : train_mean = -0.219899, train_std = 0.855451
+    Slope_z             : train_mean = -0.023461, train_std = 1.023630
+  All *_z_corr features in TRAIN verified: mean == 0.000000, std == 1.000000
+
+[Step 9] Constructing final feature matrices...
+  Features train shape: (8188, 18)
+  Features val   shape: (1731, 18)
+  Features test  shape: (1750, 18)
+
+[Step 10] Saving processed files to C:\Users\potha\OneDrive\Desktop\AI PROJECTS\RockWatch\data\processed...
+  Saved: modelling_deduped.csv (11,737 rows, 32 cols)
+  Saved: train_spatial.csv (8,188 rows, 32 cols)
+  Saved: val_spatial.csv (1,731 rows, 32 cols)
+  Saved: test_spatial.csv (1,750 rows, 32 cols)
+  Saved: features_train.csv (8,188 rows, 18 cols)
+  Saved: features_val.csv (1,731 rows, 18 cols)
+  Saved: features_test.csv (1,750 rows, 18 cols)
+  Saved: scaler_params.json
+
+================================================================================
+DOCUMENTED LIMITATIONS & SCIENTIFIC DISCLOSURES
+================================================================================
+1. Slope_z Quantisation:
+   - Slope_z was computed by the original authors from integer-degree slope (0°-76°).
+   - This produces exactly 76 discrete quantisation bins (~0.5° resolution).
+2. Spatial Independence Limitation:
+   - The 500 m boundary exclusion zone prevents immediate cross-boundary pixel leakage.
+   - However, regional environmental variables (NDVI, rainfall, elevation) possess spatial
+     autocorrelation lengths spanning 5-50 km; this boundary buffer is a precaution, not
+     proof of complete spatial independence.
+3. Longitude Distribution Imbalance:
+   - The held-out test split is geographically located in northern HP (predominantly Chamba).
+   - Eastern high-altitude regions (Kinnaur, Spiti at 77°-79°E) are not represented in test.
+4. Pseudo-Absence Uncertainty:
+   - Class=0 locations are randomly sampled pseudo-absences from GEE, not confirmed stable ground.
+
+================================================================================
+RECONCILIATION & VERIFICATION SUMMARY
+================================================================================
+  Raw input rows:                    12409
+  - Duplicate coordinate removals: -   672
+  Deduplicated working set:          11737
+  - 500m boundary exclusion rows:  -    68
+  Remaining active modelling rows:   11669
+    - TRAIN rows:                     8188 (70.17%)
+    - VAL rows:                       1731 (14.83%)
+    - TEST rows:                      1750 (15.00%)
+  Total accounted:                   12409 (Reconciliation: EXACT)
+================================================================================
+ALL VERIFICATION CHECKS PASSED SUCCESSFULLY.

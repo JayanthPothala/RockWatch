@@ -1,0 +1,392 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "title": "RockWatch Himachal Pradesh Landslide Susceptibility Export",
+    "generated_at": "2026-11-24 12:56:44 UTC",
+    "feature_count": 20,
+    "coordinate_system": "WGS84 (EPSG:4326)"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.08256338786254,
+          29.96968351959432
+        ]
+      },
+      "properties": {
+        "sample_id": 12287,
+        "susceptibility_score": 0.2529,
+        "susceptibility_class": "Moderate",
+        "elevation_m": 337.0,
+        "slope_deg": 15.66,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.97880797254675,
+          29.97507341129904
+        ]
+      },
+      "properties": {
+        "sample_id": 186,
+        "susceptibility_score": 0.0161,
+        "susceptibility_class": "Low",
+        "elevation_m": 285.0,
+        "slope_deg": 2.33,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.30705237736402,
+          29.97534290588428
+        ]
+      },
+      "properties": {
+        "sample_id": 1320,
+        "susceptibility_score": 0.2989,
+        "susceptibility_class": "Moderate",
+        "elevation_m": 888.0,
+        "slope_deg": 25.93,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.92463956091433,
+          29.97830734632187
+        ]
+      },
+      "properties": {
+        "sample_id": 139,
+        "susceptibility_score": 0.0094,
+        "susceptibility_class": "Low",
+        "elevation_m": 277.0,
+        "slope_deg": 3.7,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.12541302691506,
+          29.979924313833283
+        ]
+      },
+      "properties": {
+        "sample_id": 778,
+        "susceptibility_score": 0.1354,
+        "susceptibility_class": "Low",
+        "elevation_m": 538.0,
+        "slope_deg": 8.3,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.23455833393558,
+          29.98288875427088
+        ]
+      },
+      "properties": {
+        "sample_id": 375,
+        "susceptibility_score": 0.0291,
+        "susceptibility_class": "Low",
+        "elevation_m": 332.0,
+        "slope_deg": 3.34,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.84325219617313,
+          29.98747016221989
+        ]
+      },
+      "properties": {
+        "sample_id": 126,
+        "susceptibility_score": 0.0163,
+        "susceptibility_class": "Low",
+        "elevation_m": 275.0,
+        "slope_deg": 6.49,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5315413668655,
+          29.98773965680512
+        ]
+      },
+      "properties": {
+        "sample_id": 1645,
+        "susceptibility_score": 0.1634,
+        "susceptibility_class": "Low",
+        "elevation_m": 1160.0,
+        "slope_deg": 22.6,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.36688017528638,
+          29.98800915139036
+        ]
+      },
+      "properties": {
+        "sample_id": 1532,
+        "susceptibility_score": 0.3259,
+        "susceptibility_class": "Moderate",
+        "elevation_m": 1064.0,
+        "slope_deg": 37.28,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.85025905538924,
+          29.991512580998425
+        ]
+      },
+      "properties": {
+        "sample_id": 12056,
+        "susceptibility_score": 0.0221,
+        "susceptibility_class": "Low",
+        "elevation_m": 282.0,
+        "slope_deg": 2.78,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.98581483176287,
+          29.99286005392461
+        ]
+      },
+      "properties": {
+        "sample_id": 278,
+        "susceptibility_score": 0.033,
+        "susceptibility_class": "Low",
+        "elevation_m": 304.0,
+        "slope_deg": 3.34,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.81279930804146,
+          29.99312954850984
+        ]
+      },
+      "properties": {
+        "sample_id": 147,
+        "susceptibility_score": 0.0204,
+        "susceptibility_class": "Low",
+        "elevation_m": 280.0,
+        "slope_deg": 4.28,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.83894028280935,
+          29.995285505191728
+        ]
+      },
+      "properties": {
+        "sample_id": 12250,
+        "susceptibility_score": 0.0352,
+        "susceptibility_class": "Low",
+        "elevation_m": 281.0,
+        "slope_deg": 2.14,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.39194317171331,
+          29.995285505191728
+        ]
+      },
+      "properties": {
+        "sample_id": 1582,
+        "susceptibility_score": 0.651,
+        "susceptibility_class": "High",
+        "elevation_m": 1103.0,
+        "slope_deg": 26.79,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.70563486892786,
+          29.99690247270314
+        ]
+      },
+      "properties": {
+        "sample_id": 1454,
+        "susceptibility_score": 0.0528,
+        "susceptibility_class": "Low",
+        "elevation_m": 1012.0,
+        "slope_deg": 28.63,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.01707620365028,
+          29.997441461873613
+        ]
+      },
+      "properties": {
+        "sample_id": 286,
+        "susceptibility_score": 0.0262,
+        "susceptibility_class": "Low",
+        "elevation_m": 306.0,
+        "slope_deg": 2.83,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.73986068125282,
+          29.997441461873613
+        ]
+      },
+      "properties": {
+        "sample_id": 2154,
+        "susceptibility_score": 0.4247,
+        "susceptibility_class": "High",
+        "elevation_m": 1584.0,
+        "slope_deg": 27.86,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.88960526483368,
+          29.999866913140732
+        ]
+      },
+      "properties": {
+        "sample_id": 5324,
+        "susceptibility_score": 0.0208,
+        "susceptibility_class": "Low",
+        "elevation_m": 284.0,
+        "slope_deg": 3.34,
+        "ground_truth_class": 1,
+        "district": "Sirmaur",
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.38224136664485,
+          30.00310084816357
+        ]
+      },
+      "properties": {
+        "sample_id": 1297,
+        "susceptibility_score": 0.2477,
+        "susceptibility_class": "Moderate",
+        "elevation_m": 874.0,
+        "slope_deg": 11.43,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.40784335224225,
+          30.0033703427488
+        ]
+      },
+      "properties": {
+        "sample_id": 1721,
+        "susceptibility_score": 0.7436,
+        "susceptibility_class": "Very High",
+        "elevation_m": 1223.0,
+        "slope_deg": 25.26,
+        "ground_truth_class": 0,
+        "corridor": "Southern Outer Himalayas (< 31.71\u00b0N)"
+      }
+    }
+  ]
+}

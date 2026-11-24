@@ -1,0 +1,14 @@
+# RockWatch - Intelligent Landslide Susceptibility Prediction System
+# Core requirements for running the model and web application
+
+streamlit>=1.35.0
+plotly>=5.20.0
+scikit-learn>=1.4.0
+pandas>=2.2.0
+numpy>=1.26.0
+scipy>=1.12.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+joblib>=1.3.0
+shap>=0.45.0
+rasterio>=1.3.0

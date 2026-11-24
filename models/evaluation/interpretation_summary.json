@@ -1,0 +1,32 @@
+{
+  "Elevation_z_corr": {
+    "min_prob": 0.06253948491835877,
+    "max_prob": 0.6643943679965086,
+    "tipping_point": 0.5567738787019547
+  },
+  "Slope_z_corr": {
+    "min_prob": 0.06394927805005866,
+    "max_prob": 0.645666097354364,
+    "tipping_point": -0.760912331752686
+  },
+  "Rainfall_z_corr": {
+    "min_prob": 0.1659658802005124,
+    "max_prob": 0.7930025926961175,
+    "tipping_point": -1.2242252799279472
+  },
+  "NDVI_z_corr": {
+    "min_prob": 0.17041118949968234,
+    "max_prob": 0.6877577938911525,
+    "tipping_point": -1.8126556138608314
+  },
+  "Dist_River_z_corr": {
+    "min_prob": 0.4040232990466641,
+    "max_prob": 0.48755007843522113,
+    "tipping_point": -0.13936567776029987
+  },
+  "cos_aspect": {
+    "min_prob": 0.41244814985419526,
+    "max_prob": 0.4620004058273392,
+    "tipping_point": -0.31281676804481573
+  }
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RockWatch - Landslide Susceptibility Assessment</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1e293b;
+            background: #ffffff;
+            margin: 40px auto;
+            max-width: 850px;
+            line-height: 1.6;
+        }
+        .header {
+            border-bottom: 3px solid #1e4533;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+        .header h1 {
+            color: #1e4533;
+            margin: 0 0 6px 0;
+            font-size: 26px;
+            font-weight: 800;
+        }
+        .header p {
+            color: #64748b;
+            margin: 0;
+            font-size: 14px;
+        }
+        .score-box {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .tier-badge {
+            display: inline-block;
+            background: #f9731622;
+            color: #f97316;
+            border: 1px solid #f97316;
+            font-weight: 800;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0 24px 0;
+            font-size: 14px;
+        }
+        th, td {
+            padding: 10px 12px;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        th {
+            background: #f1f5f9;
+            color: #334155;
+            font-weight: 700;
+        }
+        .advisory-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        .advisory-card {
+            background: #fafafa;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 13px;
+        }
+        .disclaimer {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 14px 18px;
+            border-radius: 0 8px 8px 0;
+            font-size: 13px;
+            color: #7f1d1d;
+            margin-top: 30px;
+        }
+        .footer {
+            margin-top: 36px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 14px;
+            font-size: 12px;
+            color: #94a3b8;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>⛰️ RockWatch: Landslide Susceptibility Assessment</h1>
+        <p>Scientific Geospatial Environmental Intelligence · Himachal Pradesh, India</p>
+    </div>
+
+    <div class="score-box">
+        <div>
+            <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #64748b;">Target Location Profile</div>
+            <div style="font-size: 18px; font-weight: 700; color: #0f172a; margin-top: 2px;">Kangra Steep Monsoon Ridge (Audit Sample)</div>
+            <div style="font-size: 12px; color: #64748b; margin-top: 4px;">Assessed: 2026-11-24 12:45:00 UTC · Model: Gradient Boosting Champion v1</div>
+        </div>
+        <div style="text-align: right;">
+            <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #64748b;">Relative Susceptibility Index</div>
+            <div style="font-size: 32px; font-weight: 800; color: #f97316; line-height: 1.1;">68.4%</div>
+            <div style="margin-top: 6px;"><span class="tier-badge">HIGH HAZARD</span></div>
+        </div>
+    </div>
+
+    <h3 style="color: #1e4533; margin-bottom: 8px;">1. Environmental Conditioning Parameters</h3>
+    <table>
+        <tr>
+            <th>Parameter</th>
+            <th>Value</th>
+            <th>Scientific Meaning</th>
+        </tr>
+        <tr><td><strong>Elevation (SRTM DEM)</strong></td><td>1650 m</td><td>Macro-climatic thermal and periglacial gradient</td></tr>
+        <tr><td><strong>Slope Gradient</strong></td><td>38.0°</td><td>Gravitational shear driving stress</td></tr>
+        <tr><td><strong>Aspect Orientation</strong></td><td>210.0°</td><td>Solar insolation and freeze-thaw weathering</td></tr>
+        <tr><td><strong>Land Cover (ESA WorldCover)</strong></td><td>Bare Ground / Sparse Rock (LULC 60)</td><td>Root cohesion and vegetative stabilization</td></tr>
+        <tr><td><strong>Distance to Drainage</strong></td><td>180 m</td><td>Fluvial toe undercut potential</td></tr>
+        <tr><td><strong>Flow Accumulation</strong></td><td>850 cells</td><td>Subsurface hydrologic catchment area</td></tr>
+        <tr><td><strong>Precipitation Anomaly</strong></td><td>1.6</td><td>Monsoon saturation predisposition index</td></tr>
+        <tr><td><strong>Vegetation Index (NDVI)</strong></td><td>0.38</td><td>Sentinel-2 canopy density factor</td></tr>
+    </table>
+
+    
+    <h3 style="color: #1e4533; margin-bottom: 8px; margin-top: 18px;">2. Local Model Explainability (SHAP TreeExplainer Attribution)</h3>
+    <table>
+        <tr>
+            <th>Conditioning Feature</th>
+            <th>Evaluated Input</th>
+            <th>SHAP Contribution (Log-Odds)</th>
+            <th>Geomorphic Influence</th>
+        </tr>
+        
+        <tr>
+            <td><strong>Slope Gradient</strong></td>
+            <td><code>38.0°</code></td>
+            <td style="color: #ef4444; font-weight: 700;">+0.4852 (Increasing Risk ↗)</td>
+            <td>High gravitational shear stress driving factor.</td>
+        </tr>
+            
+        <tr>
+            <td><strong>Distance to Stream</strong></td>
+            <td><code>180 m</code></td>
+            <td style="color: #ef4444; font-weight: 700;">+0.3210 (Increasing Risk ↗)</td>
+            <td>Fluvial toe undercut proximity.</td>
+        </tr>
+            
+        <tr>
+            <td><strong>Vegetation Vigour (NDVI)</strong></td>
+            <td><code>0.38</code></td>
+            <td style="color: #10b981; font-weight: 700;">-0.1540 (Buffering Risk ↘)</td>
+            <td>Moderate vegetative bio-stabilization.</td>
+        </tr>
+                </table>
+
+
+    <h3 style="color: #1e4533; margin-bottom: 8px;">3. Geospatial Planning Advisories</h3>
+    <div class="advisory-grid">
+        <div class="advisory-card">
+            <strong style="color: #0f172a;">Level 1 (Index &ge; 0.16)</strong>
+            <p style="margin: 6px 0 0 0; color: #475569;">Routine culvert clearance and drainage inspection. Routine vegetative maintenance; not an emergency alert.</p>
+        </div>
+        <div class="advisory-card">
+            <strong style="color: #0f172a;">Level 2 (Index &ge; 0.37)</strong>
+            <p style="margin: 6px 0 0 0; color: #475569;">Enhanced terrain surveillance. Recommended for municipal register tracking and slope toe checks.</p>
+        </div>
+        <div class="advisory-card">
+            <strong style="color: #0f172a;">Level 3 (Index &ge; 0.86)</strong>
+            <p style="margin: 6px 0 0 0; color: #475569;">Priority geotechnical investigation. In-situ core drilling and structural FoS analysis advised before structural works.</p>
+        </div>
+    </div>
+
+    <div class="disclaimer">
+        <strong>⚠️ SCIENTIFIC & DISASTER MANAGEMENT DISCLAIMER:</strong><br>
+        This report reflects <em>static spatial terrain susceptibility</em> based on environmental conditioning factors.
+        It does <strong>NOT</strong> forecast real-time failure events or dynamic storm-triggered occurrences.
+        These outputs are computational decision-support estimates and do <strong>NOT</strong> constitute statutory authority
+        for construction prohibitions, building bans, or civil protection evacuation orders. All engineering interventions
+        require certified on-site geotechnical core drilling and ground stabilization analysis.
+    </div>
+
+    <div class="footer">
+        RockWatch Landslide Susceptibility System · Western Himalayas Research Framework · Report Generated Automatically
+    </div>
+</body>
+</html>

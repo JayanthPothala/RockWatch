@@ -1,0 +1,33 @@
+{
+  "fitted_on": "TRAIN split (after deduplication and exclusion zone)",
+  "n_train_rows": 8188,
+  "features": {
+    "Dist_River_z": {
+      "train_mean": 0.01709033222929742,
+      "train_std": 1.0621186855636358
+    },
+    "Elevation_z": {
+      "train_mean": -0.07759704873692205,
+      "train_std": 0.9607516020989141
+    },
+    "FlowAccumulation_z": {
+      "train_mean": -0.055684440233793694,
+      "train_std": 0.9437754245843364
+    },
+    "NDVI_z": {
+      "train_mean": 0.09072776994248899,
+      "train_std": 0.958193183869817
+    },
+    "Rainfall_z": {
+      "train_mean": -0.219899213216488,
+      "train_std": 0.8554507444256947
+    },
+    "Slope_z": {
+      "train_mean": -0.023461073109826286,
+      "train_std": 1.0236297009731605
+    }
+  },
+  "excluded": {
+    "Aspect_z": "Replaced by sin_aspect and cos_aspect; not scaled"
+  }
+}
