@@ -14,6 +14,21 @@
 
 ---
 
+## 🚀 Live Demo
+
+- **Try RockWatch:** [https://rockwatch-dgcgqyuoxuufjv8bthht26.streamlit.app/](https://rockwatch-dgcgqyuoxuufjv8bthht26.streamlit.app/)
+- **Source Code:** [https://github.com/JayanthPothala/RockWatch](https://github.com/JayanthPothala/RockWatch)
+
+<div align="center">
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://rockwatch-dgcgqyuoxuufjv8bthht26.streamlit.app/)
+
+### [🌐 Launch RockWatch Application](https://rockwatch-dgcgqyuoxuufjv8bthht26.streamlit.app/)
+
+</div>
+
+---
+
 ## Table of Contents
 
 1. [Executive Summary & Problem Statement](#1-executive-summary--problem-statement)
@@ -574,7 +589,7 @@ RockWatch/
 
 ### 17.1 Clone the Repository
 ```bash
-git clone https://github.com/your-username/RockWatch.git
+git clone https://github.com/JayanthPothala/RockWatch.git
 cd RockWatch
 ```
 
@@ -742,7 +757,7 @@ If you utilize the RockWatch methodology, code, or datasets in your research, pl
   title  = {RockWatch: Intelligent Landslide Susceptibility Prediction System for Himachal Pradesh, India},
   author = {RockWatch Research Team},
   year   = {2026},
-  url    = {https://github.com/your-username/RockWatch},
+  url    = {https://github.com/JayanthPothala/RockWatch},
   note   = {Spatial Block Validated Supervised Machine Learning & Explainable AI Framework}
 }
 ```
